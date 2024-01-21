@@ -1,0 +1,16 @@
+.root {
+	margin-top: 32px;
+}
+
+.buttons_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 16px;
+}
+
+.list {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}

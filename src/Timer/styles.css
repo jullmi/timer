@@ -1,0 +1,16 @@
+.timer {
+	border: 1px solid black;
+	padding: 32px;
+}
+
+.timer_value {
+	text-align: center;
+}
+
+.timer_buttons_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 16px;
+	margin-top: 10px;
+}

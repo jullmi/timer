@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Duration } from 'luxon'
+import { Duration } from "luxon";
 
 import { enableTimer, resetTimer, useTimerValue } from './behavior'
+import './styles.css'
 
 function Timer() {
 	const emptyDuration = Duration.fromObject({minutes: 0, seconds: 0, milliseconds: 0});
@@ -11,10 +12,12 @@ function Timer() {
 	const value = useTimerValue(isTimerEnable, timerValue, setTimerValue)
 
 	return (
-		<div style={{border: "1px solid black", padding: 16, width: "max-content"}}>
-			<div>{`${value.minutes}:${value.seconds}.${value.milliseconds}`}</div>
-			<button onClick={() => enableTimer(setIsTimerEnable)}>Start / Pause</button>
-			<button onClick={() => resetTimer(setTimerValue, emptyDuration)}>Reset</button>
+		<div className="timer">
+			<div className="timer_value">{`${value.minutes}:${value.seconds}.${value.milliseconds}`}</div>
+			<div className='timer_buttons_container'>
+				<button onClick={() => enableTimer(setIsTimerEnable)}>Start / Pause</button>
+				<button onClick={() => resetTimer(setTimerValue, emptyDuration)}>Reset</button>
+			</div>
 		</div>
 	);
 }
